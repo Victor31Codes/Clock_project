@@ -1,0 +1,187 @@
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.125,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fs--2: clamp(0.7rem, calc(0.95rem + -0.32vw), 0.89rem);
+  --fs--1: clamp(0.94rem, calc(1.02rem + -0.11vw), 1rem);
+  --fs-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --fs-1: clamp(1.27rem, calc(1.13rem + 0.7vw), 1.67rem);
+  --fs-2: clamp(1.42rem, calc(1.15rem + 1.39vw), 2.22rem);
+  --fs-3: clamp(1.6rem, calc(1.13rem + 2.36vw), 2.96rem);
+  --fs-4: clamp(1.8rem, calc(1.06rem + 3.73vw), 3.95rem);
+  --fs-5: clamp(2.03rem, calc(0.9rem + 5.62vw), 5.26rem);
+  --fs-6: clamp(2.28rem, calc(1.14rem + 6.23vw), 6.12rem);
+  --darkTheme: #151215;
+  --lightTheme: #fafafa;
+  --transition: all 0.4s ease;
+}
+
+body {
+  background-color: var(--darkTheme);
+  transition: var(--transition);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+::selection {
+  color: rgb(80, 177, 209);
+}
+
+body.change_theme {
+  background-color: var(--lightTheme);
+}
+
+a.change_theme,
+h4.change_theme,
+h2.change_theme,
+p.change_theme {
+  color: var(--darkTheme);
+}
+h4,
+p,
+h2 {
+  color: var(--lightTheme);
+  transition: var(--transition);
+}
+h4:hover,
+p:hover,
+h2:hover {
+  color: lightblue;
+  scale: 1.1;
+}
+
+.nav_container {
+  width: 100vw;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  transition: var(--transition);
+}
+
+.moon-clr {
+  color: var(--darkTheme);
+  transition: var(--transition);
+}
+.moon-clr:hover {
+  scale: 1.1;
+}
+
+.sun-clr {
+  color: var(--lightTheme);
+  transition: var(--transition);
+}
+.sun-clr:hover {
+  scale: 1.1;
+}
+
+.list_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lists {
+  list-style: none;
+  font-size: var(--fs-4);
+  font-weight: 600;
+}
+
+.link_list {
+  text-decoration: none;
+  color: var(--lightTheme);
+  transition: var(--transition);
+  cursor: text;
+}
+
+.clock_container {
+  height: calc(100vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.date_container {
+  display: flex;
+  height: 12vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.date_container p {
+  font-size: var(--fs-2);
+}
+.time_container p {
+  font-size: var(--fs-3);
+}
+
+.week_day,
+.month_day,
+.month_year,
+.year {
+  font-size: var(--fs-3);
+}
+
+.time_container {
+  display: flex;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.hours,
+.minutes,
+.seconds,
+.pmam {
+  font-size: var(--fs-6);
+  display: inline-block;
+}
+
+.footer_container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  height: 5rem;
+  gap: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+.footer_container p {
+  margin-bottom: 0;
+  font-size: var(--fs-1);
+  color: var(--darkTheme);
+  text-align: center;
+}
+.footer_container p span {
+  color: var(--darkTheme);
+}
+.footer_container p a {
+  color: var(--darkTheme);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Victor31Codes" />
+    <meta name="description" content="A real time clock" />
+    <meta name="keywords" content="clock, HTML, CSS, JS, calculate" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e8f5675b73.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="assets/reloj.png" type="image/x-icon" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <nav class="nav_container">
+      <ul class="list_container">
+        <li class="lists">
+          <a id="fst_list_element" href="#" class="link_list">Clock Timer</a>
+        </li>
+        <li class="lists">
+          <a href="#" id="snd_list_element"
+            ><i class="fa-regular fa-sun sun-clr"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="clock_container">
+      <section class="date_container">
+        <h4 class="week_day" id="week_day"></h4>
+        <h4 class="month_year" id="month_year"></h4>
+        <p id="the_conector">the</p>
+        <h4 class="month_day" id="month_day"></h4>
+        <p id="of_conector">of</p>
+        <h4 class="year" id="year"></h4>
+      </section>
+      <section class="time_container">
+        <h2 class="hours" id="hours"></h2>
+        <p id="fst_two">:</p>
+        <h2 class="minutes" id="minutes"></h2>
+        <p id="snd_two">:</p>
+        <h2 class="seconds" id="seconds"></h2>
+        <p class="pmam" id="pmam"></p>
+      </section>
+    </main>
+    <footer class="footer_container">
+      <p>
+        &copy; 2023 <span>Clock Timer</span> All rights reserved
+        <a
+          href="https://github.com/Victor31Codes?tab=repositories"
+          target="_blank"
+        >
+          Victor31Codes<i class="fa-brands fa-github"></i
+        ></a>
+      </p>
+    </footer>
+  </body>
+  <script src="app.js"></script>
+</html>
